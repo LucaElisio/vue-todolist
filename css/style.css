@@ -1,0 +1,162 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Header Style */
+.headers{
+    background-color: #edf2f7;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.164);
+}
+
+/* common characteristics of the containers */
+.container{
+    background-color: #edf2f7;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/* CONTAINER ADD TASK */
+.addtask{
+    margin-top: 40px;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+/* Input task */
+.add-taskname{
+    padding: 8px;
+    width: 250px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.164);
+}
+/* Button add */
+.button-add{
+    padding: 8px;
+    background-color: #14aaf5;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.164);
+}
+/* Button text */
+.button-text{
+    color: white;
+}
+
+/* CONTAINER MAIN TASK */
+.maintask{
+    padding: 30px;
+    margin-top: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Tutte le liste non ordinate */
+ul{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* macrolist name */
+.macrolistname{
+    color: rgb(78, 78, 78);
+}
+
+.macrolista{
+    margin-top: 20px;
+}
+
+/* single task of the list */
+.list-item{
+    padding: 5px 15px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.164);
+}
+
+.list-item span{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.taskname{
+    font-size: 20px;
+    color: rgb(94, 94, 94);
+}
+
+/* TASK TYPE */
+.tasktype{
+    /* Tips: per gli elementi testo alla quale va associato un padding, è buona norma farli diventare inline-block, in quanto padding non funziona bene sui testi */
+    display: inline-block;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 15px;
+    font-size: 13px;
+}
+.editorial{
+    background-color: #14aaf5;
+}
+.goals{
+    background-color: #AB5DE6;
+}
+.recruiting{
+    background-color: #2cc6ab;
+}
+.website{
+    background-color: #EC4A9D;
+}
+.sales{
+    background-color: #A3D116;
+}
+.mobile{
+    background-color: orange;
+}
+
+/* TASK DONE-TASK UNDONE */
+.done{
+    text-decoration-line: line-through;
+}
+.undone {
+    color: black;
+}
+
+/* CHECKED-UNCHECKED */
+.unchecked{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+}
+.checked{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+

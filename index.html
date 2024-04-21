@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toboolist</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    
+    <div id="app">
+
+        <!-- header -->
+        <header class="headers">
+            <img src="img/logo.png" alt="">
+        </header>
+        <!-- /header -->
+    
+        <!-- main -->
+        <main>
+            <!-- Container Add Task -->
+            <div class="container addtask">
+                <input type="text" class="add-taskname" placeholder="es: Fare la spesa...">
+                <button class="button-add"><span class="button-text">Add Task</span></button>
+            </div>
+            <!-- /Container Add Task -->
+    
+            <!-- Container Task -->
+            <div class="container maintask">
+    
+
+                <ul>
+                    <li class="macrolista">
+
+                        <!-- <h3 v-if="!cards.length">Non ci sono Carte Fedeltà</h3> -->
+
+    
+                        <!-- nome -->
+                        <!-- <strong  class="macrolistname"> &#11166; OGGI</strong> -->
+    
+                        <!-- lista di task -->
+                        <ul>
+                            <!-- ogni task della lista -->
+                            <li v-for="(toDoItem, index) in toDo" class="list-item">
+                                <span :class="toDo.done" v-if="toDoItem.done">&check;</span>
+                                <span :class="toDo.done" v-else>&cross;</span>
+                                <span class="taskname" :class="toDo.done">{{toDoItem.text}}</span>
+                                <!-- <span class="tasktype goals done">Q1 Goals</span> -->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /Container Task -->
+    
+        </main>
+        <!-- /main -->
+    </div>
+
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
