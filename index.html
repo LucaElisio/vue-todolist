@@ -27,8 +27,10 @@
         <main>
             <!-- Container Add Task -->
             <div class="container addtask">
-                <input type="text" class="add-taskname" placeholder="es: Fare la spesa...">
-                <button class="button-add"><span class="button-text">Add Task</span></button>
+                <label for="inputToDo"></label>
+                <input type="text" id="inputToDo" class="add-taskname" placeholder="es: Fare la spesa..." v-model="newToDo.text">
+                <button class="button-add"><span class="button-text" @click="addToDo()">Add Task</span></button>
+                <div class="error" v-if="error">Inserisci del testo! </div>
             </div>
             <!-- /Container Add Task -->
     
@@ -49,9 +51,9 @@
                         <ul>
                             <!-- ogni task della lista -->
                             <li v-for="(toDoItem, index) in toDo" class="list-item">
-                                <span :class="toDo.done" v-if="toDoItem.done">&check;</span>
-                                <span :class="toDo.done" v-else>&cross;</span>
-                                <span class="taskname" :class="toDo.done">{{toDoItem.text}}</span>
+                                <span class="checked" v-if="toDoItem.isDone">&check;</span>
+                                <span class="unchecked" v-else>&cross;</span>
+                                <span class="taskname" :class="toDoItem.done">{{toDoItem.text}}</span>
                                 <!-- <span class="tasktype goals done">Q1 Goals</span> -->
                             </li>
                         </ul>
