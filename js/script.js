@@ -51,9 +51,13 @@ createApp({
                 this.error = false
             }
         },
-        
+
         toggleDone: function(clickedIndex){
             this.toDo[clickedIndex].isDone = !this.toDo[clickedIndex].isDone
+        },
+
+        removeToDo: function(clickedIndex) {
+            this.toDo.splice(clickedIndex, 1)
         }
     }
 }).mount("#app")
