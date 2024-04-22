@@ -51,7 +51,7 @@
                         <!-- lista di task -->
                         <ul>
                             <!-- ogni task della lista -->
-                            <li v-for="(toDoItem, index) in toDo" class="list-item">
+                            <li v-for="(toDoItem, index) in toDo" class="list-item" @click="toggleDone(index)">
                                 <span class="checked" v-if="toDoItem.isDone">&check;</span>
                                 <span class="unchecked" v-else>&cross;</span>
                                 <span class="taskname" :class="toDoItem.done">{{toDoItem.text}}</span>
