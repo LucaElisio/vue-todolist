@@ -28,7 +28,8 @@
             <!-- Container Add Task -->
             <div class="container addtask">
                 <label for="inputToDo"></label>
-                <input type="text" id="inputToDo" class="add-taskname" placeholder="es: Fare la spesa..." v-model="newToDo.text">
+                <!-- v-model.trim elimina gli spazi vuoti all'inizio e alla fine -->
+                <input type="text" id="inputToDo" class="add-taskname" placeholder="es: Fare la spesa..." v-model.trim="newToDo.text" @keyup.enter="addToDo">
                 <button class="button-add"><span class="button-text" @click="addToDo()">Add Task</span></button>
                 <div class="error" v-if="error">Inserisci del testo! </div>
             </div>

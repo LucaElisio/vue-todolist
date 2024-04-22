@@ -39,6 +39,10 @@ createApp({
     },
     methods: {
         addToDo: function(){
+
+            // Elimino gli spazi vuoti tramite trim, questa cosa si può fare direttamente nel v-model nell'html
+            // this.newToDo.text = this.newToDo.text.trim();
+            
             if(this.newToDo.text === "") {
                 this.error = true
             } else {
@@ -46,7 +50,6 @@ createApp({
                 this.newToDo.text = ""
                 this.error = false
             }
-
         }
     }
 }).mount("#app")
